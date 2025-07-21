@@ -28,6 +28,7 @@
     <main>
         <div class="container my-5">
             <div id="overviewAccordion" class="accordion">
+                <h1 class="mb-4">Individual Activity Specific Settings</h1>
                 <div class="card">
                     <div class="card-header" id="headingAssignment">
                         <h2 class="mb-0">
@@ -36,7 +37,7 @@
                             </button>
                         </h2>
                     </div>
-                    <div id="collapseAssignment" class="collapse show" aria-labelledby="headingAssignment" data-parent="#overviewAccordion">
+                    <div id="collapseAssignment" class="collapse" aria-labelledby="headingAssignment" data-parent="#overviewAccordion">
                         <div class="card-body">
                             <div class="table-responsive">
                                 <table class="table table-bordered table-hover table-striped bg-white">
@@ -370,7 +371,160 @@
                     </div>
                 </div>
                 <!-- Add more cards here for additional tables in the future -->
+                <div class="card">
+                    <div class="card-header" id="headingQuiz">
+                        <h2 class="mb-0">
+                            <button class="btn btn-link btn-block text-left font-weight-bold" type="button" data-toggle="collapse" data-target="#collapseQuiz" aria-expanded="false" aria-controls="collapseQuiz">
+                                Quiz Settings Columns
+                            </button>
+                        </h2>
+                    </div>
+                    <div id="collapseQuiz" class="collapse" aria-labelledby="headingQuiz" data-parent="#overviewAccordion">
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <h1>Coming soon...</h1>
+                                <table class="table table-bordered table-hover table-striped bg-white">
+                                    <thead class="thead-light">
+                                        <tr>
+                                            <th>Name of the column</th>
+                                            <th>Can be filtered?</th>
+                                            <th>Where can I see it on the UI?</th>
+                                            <th>Comment</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <!-- Add quiz settings rows here -->
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header" id="headingForum">
+                        <h2 class="mb-0">
+                            <button class="btn btn-link btn-block text-left font-weight-bold" type="button" data-toggle="collapse" data-target="#collapseForum" aria-expanded="false" aria-controls="collapseForum">
+                                Forum Settings Columns
+                            </button>
+                        </h2>
+                    </div>
+                    <div id="collapseForum" class="collapse" aria-labelledby="headingForum" data-parent="#overviewAccordion">
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <h1>Coming soon...</h1>
+                                <table class="table table-bordered table-hover table-striped bg-white">
+                                    <thead class="thead-light">
+                                        <tr>
+                                            <th>Name of the column</th>
+                                            <th>Can be filtered?</th>
+                                            <th>Where can I see it on the UI?</th>
+                                            <th>Comment</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <!-- Add Forum settings rows here -->
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header" id="headingSCORM">
+                        <h2 class="mb-0">
+                            <button class="btn btn-link btn-block text-left font-weight-bold" type="button" data-toggle="collapse" data-target="#collapseSCORM" aria-expanded="false" aria-controls="collapseSCORM">
+                                SCORM Settings Columns
+                            </button>
+                        </h2>
+                    </div>
+                    <div id="collapseSCORM" class="collapse" aria-labelledby="headingSCORM" data-parent="#overviewAccordion">
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <h1>Coming soon...</h1>
+                                <table class="table table-bordered table-hover table-striped bg-white">
+                                    <thead class="thead-light">
+                                        <tr>
+                                            <th>Name of the column</th>
+                                            <th>Can be filtered?</th>
+                                            <th>Where can I see it on the UI?</th>
+                                            <th>Comment</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <!-- Add SCORM settings rows here -->
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
+            <!-- Second Accordion for shared entities-->
+            <div id="sharedAccordion" class="accordion mt-5">
+                <h1 class="mb-4">Shared Entity Settings</h1>
+                <p><em>The Course and Course Category entities are part of core Moodle.
+                    <a href="https://docs.moodle.org/en/Custom_reports#Report_sources" target="_blank"><i class="bi bi-box-arrow-up-right"></i></a></em></p>
+                <div class="card">
+                    <div class="card-header" id="headingSharedCourseModules">
+                        <h2 class="mb-0">
+                            <button class="btn btn-link btn-block text-left font-weight-bold" type="button" data-toggle="collapse" data-target="#collapseSharedCourseModules" aria-expanded="true" aria-controls="collapseSharedCourseModules">
+                                Course Modules Settings Columns
+                            </button>
+                        </h2>
+                    </div>
+                    <div id="collapseSharedCourseModules" class="collapse" aria-labelledby="headingSharedCourseModules" data-parent="#sharedAccordion">
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <h1>Coming soon...</h1>
+                                <table class="table table-bordered table-hover table-striped bg-white">
+                                    <thead class="thead-light">
+                                        <tr>
+                                            <th>Name of the column</th>
+                                            <th>Can be filtered?</th>
+                                            <th>Where can I see it on the UI?</th>
+                                            <th>Comment</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <!-- Add shared Course Modules settings rows here -->
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header" id="headingSharedGradeItems">
+                        <h2 class="mb-0">
+                            <button class="btn btn-link btn-block text-left font-weight-bold" type="button" data-toggle="collapse" data-target="#collapseSharedGradeItems" aria-expanded="true" aria-controls="collapseSharedGradeItems">
+                                Grade Items Settings Columns
+                            </button>
+                        </h2>
+                    </div>
+                    <div id="collapseSharedGradeItems" class="collapse" aria-labelledby="headingSharedGradeItems" data-parent="#sharedAccordion">
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <h1>Coming soon...</h1>
+                                <table class="table table-bordered table-hover table-striped bg-white">
+                                    <thead class="thead-light">
+                                        <tr>
+                                            <th>Name of the column</th>
+                                            <th>Can be filtered?</th>
+                                            <th>Where can I see it on the UI?</th>
+                                            <th>Comment</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <!-- Add shared Grade Items settings rows here -->
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Add more cards here for additional shared entities in the future -->
+            </div>
+            <!-- Back to home button to the bottom -->
             <div class="text-center mt-4">
                 <a href="../../index.html#guides" class="btn btn-primary">Back to Home</a>
             </div>
