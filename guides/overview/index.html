@@ -7,6 +7,13 @@
     <link rel="icon" type="image/png" href="../../assets/logo_icon_round.png">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+    <style>
+        @media (min-width: 576px) {
+            .modal-dialog {
+                max-width: 40%; /* make the pop up image bigger/wider */
+            }
+        }
+    </style>
 </head>
 <body class="bg-light">
     <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm fixed-top">
@@ -119,7 +126,7 @@
                                         <tr>
                                             <td>11. Grant attempts</td>
                                             <td class="text-center"><i class="bi bi-check-circle-fill text-success"></i></td>
-                                            <td></td>
+                                            <td>Not visible when 'Allowed attempts' is set to 1.</td>
                                         </tr>
                                         <tr>
                                             <td>12. Students submit in groups</td>
@@ -475,7 +482,6 @@
                     <div id="collapseSharedCourseModules" class="collapse" aria-labelledby="headingSharedCourseModules" data-parent="#sharedAccordion">
                         <div class="card-body">
                             <div class="table-responsive">
-                                <h1>Coming soon...</h1>
                                 <table class="table table-bordered table-hover table-striped bg-white">
                                     <thead class="thead-light">
                                         <tr>
@@ -486,9 +492,188 @@
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <!-- Add shared Course Modules settings rows here -->
+                                        <tr>
+                                            <td>1. Visible</td>
+                                            <td class="text-center"><i class="bi bi-check-circle-fill text-success"></i></td>
+                                            <td rowspan="2" class="text-center" style="vertical-align: middle;">
+                                                <button type="button" class="btn btn-info mb-3" data-toggle="modal" data-target="#cm_commonmoduleModal">
+                                                    Common Module settings
+                                                </button>
+                                            </td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>2. Make available but don't show on course page</td>
+                                            <td class="text-center"><i class="bi bi-check-circle-fill text-success"></i></td>
+                                            <td>The administrator should first 'Allow stealth activities' from Site administration > Advanced features.
+                                                <a href="https://docs.moodle.org/en/Stealth_activities" target="_blank"><i class="bi bi-box-arrow-up-right"></i></a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>3. Visible Old</td>
+                                            <td class="text-center"><i class="bi bi-check-circle-fill text-success"></i></td>
+                                            <td class="text-center"><i class="bi bi-eye-slash-fill text-warning"></i></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>4. ID number</td>
+                                            <td class="text-center"><i class="bi bi-check-circle-fill text-success"></i></td>
+                                            <td rowspan="3" class="text-center" style="vertical-align: middle;">
+                                                <button type="button" class="btn btn-info mb-3" data-toggle="modal" data-target="#cm_commonmoduleModal">
+                                                    Common Module settings
+                                                </button>
+                                            </td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>5. Group mode</td>
+                                            <td class="text-center"><i class="bi bi-check-circle-fill text-success"></i></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>6. Grouping name</td>
+                                            <td class="text-center"><i class="bi bi-check-circle-fill text-success"></i></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>7. Completion tracking</td>
+                                            <td class="text-center"><i class="bi bi-check-circle-fill text-success"></i></td>
+                                            <td rowspan="5" class="text-center" style="vertical-align: middle;">
+                                                <button type="button" class="btn btn-info mb-3" data-toggle="modal" data-target="#cm_completionModal">
+                                                    Completion conditions settings
+                                                </button>
+                                            </td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>8. Receive a grade</td>
+                                            <td class="text-center"><i class="bi bi-check-circle-fill text-success"></i></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>9. View the activity</td>
+                                            <td class="text-center"><i class="bi bi-check-circle-fill text-success"></i></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>10. Set reminder in Timeline</td>
+                                            <td class="text-center"><i class="bi bi-check-circle-fill text-success"></i></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>11. Require passing grade</td>
+                                            <td class="text-center"><i class="bi bi-check-circle-fill text-success"></i></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>12. Display description on course page</td>
+                                            <td class="text-center"><i class="bi bi-check-circle-fill text-success"></i></td>
+                                            <td>Normally, it is under the General section in the activity setting.</td>
+                                            <td>Some module types support a 'description' which shows within the module pages.</td>
+                                        </tr>
+                                        <tr>
+                                            <td>13. Access restrictions</td>
+                                            <td class="text-center"><i class="bi bi-x-circle-fill text-danger"></i></td>
+                                            <td class="text-center" style="vertical-align: middle;">
+                                                <button type="button" class="btn btn-info mb-3" data-toggle="modal" data-target="#cm_restrictionModal">
+                                                    Restrict access settings
+                                                </button>
+                                            </td>
+                                            <td>
+                                                <div>
+                                                    <i class="bi bi-patch-exclamation-fill text-success"></i>
+                                                    In the database, this is JSON data including IDs and operators, which is not easy to read. It looks something like the following:
+                                                    <br>
+                                                    <div class="alert alert-warning" role="alert">
+                                                        <code>{"op":"&", "c":[{"type":"date", "d":">=", "t":1751670000, "nodeUID":1751717275957}], "showc":[false]}</code>
+                                                    </div>
+                                                    <br>Using MySQL, it is almost impossible to decode or make it human readable;
+                                                    however, the Activity Setting Report will show the human-readable version of the restrictions.
+                                                    <br>
+                                                    <div class="alert alert-success" role="alert">
+                                                        <code>Available from <strong>5 July 2025</strong> (hidden otherwise)</code>
+                                                    </div><hr>
+                                                    How to set up restrict access?
+                                                    <a href="https://docs.moodle.org/en/Restrict_access_settings" target="_blank"><i class="bi bi-box-arrow-up-right"></i></a>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>14. Deletion in progress</td>
+                                            <td class="text-center"><i class="bi bi-check-circle-fill text-success"></i></td>
+                                            <td class="text-center"><i class="bi bi-eye-slash-fill text-warning"></i></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>15. Include in course content download</td>
+                                            <td class="text-center"><i class="bi bi-check-circle-fill text-success"></i></td>
+                                            <td rowspan="2" class="text-center" style="vertical-align: middle;">
+                                                <button type="button" class="btn btn-info mb-3" data-toggle="modal" data-target="#cm_commonmoduleModal">
+                                                    Common Module settings
+                                                </button>
+                                            </td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>16. Force language</td>
+                                            <td class="text-center"><i class="bi bi-check-circle-fill text-success"></i></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>17. URL as text</td>
+                                            <td class="text-center"><i class="bi bi-x-circle-fill text-danger"></i></td>
+                                            <td>It is available to you in your browser's address bar when you visit the activity main page.</td>
+                                            <td>
+                                                <i class="bi bi-patch-exclamation-fill text-success"></i> This feature is missing from core Moodle.
+                                            </td>
+                                        </tr>
                                     </tbody>
                                 </table>
+                                <div class="modal fade" id="cm_commonmoduleModal" tabindex="-1" role="dialog" aria-labelledby="cm_commonmoduleModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog modal-dialog-centered" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title" id="cm_commonmoduleModalLabel">Common module settings UI</h5>
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                            <div class="modal-body text-center">
+                                                <img src="cm_commonmodule.png" alt="Common module settings UI" class="img-fluid" style="max-width:100%;height:auto;">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal fade" id="cm_completionModal" tabindex="-1" role="dialog" aria-labelledby="cm_completionModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog modal-dialog-centered" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title" id="cm_completionModalLabel">Completion conditions UI</h5>
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                            <div class="modal-body text-center">
+                                                <img src="cm_completion.png" alt="Completion conditions UI" class="img-fluid" style="max-width:100%;height:auto;">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal fade" id="cm_restrictionModal" tabindex="-1" role="dialog" aria-labelledby="cm_restrictionModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog modal-dialog-centered" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title" id="cm_restrictionModalLabel">Restrict access settings UI</h5>
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                            <div class="modal-body text-center">
+                                                <img src="cm_restriction.png" alt="Restrict access settings UI" class="img-fluid" style="max-width:100%;height:auto;">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -504,7 +689,6 @@
                     <div id="collapseSharedGradeItems" class="collapse" aria-labelledby="headingSharedGradeItems" data-parent="#sharedAccordion">
                         <div class="card-body">
                             <div class="table-responsive">
-                                <h1>Coming soon...</h1>
                                 <table class="table table-bordered table-hover table-striped bg-white">
                                     <thead class="thead-light">
                                         <tr>
@@ -515,9 +699,136 @@
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <!-- Add shared Grade Items settings rows here -->
+                                        <tr>
+                                            <td>1. Item name</td>
+                                            <td class="text-center"><i class="bi bi-check-circle-fill text-success"></i></td>
+                                            <td rowspan="8" class="text-center" style="vertical-align: middle;">
+                                                <button type="button" class="btn btn-info mb-3" data-toggle="modal" data-target="#grade1Modal">
+                                                    Gradebook settings (Point) UI
+                                                </button>
+                                                <button type="button" class="btn btn-info mb-3" data-toggle="modal" data-target="#grade2Modal">
+                                                    Gradebook settings (Scale) UI
+                                                </button>
+                                                <button type="button" class="btn btn-info mb-3" data-toggle="modal" data-target="#grade3Modal">
+                                                    Activity settings - Grade (Point) UI
+                                                </button>
+                                                <button type="button" class="btn btn-info mb-3" data-toggle="modal" data-target="#grade4Modal">
+                                                    Activity settings - Grade (Scale) UI
+                                                </button>
+                                            </td>
+                                            <td>Mostly the same as the name of the activity. If an activity can have 2 grades (i.e. Forum or Workshop)
+                                                then there are 2 corresponding grade items in the Gradebook</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2. Grade type</td>
+                                            <td class="text-center"><i class="bi bi-check-circle-fill text-success"></i></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>3. Minimum grade</td>
+                                            <td class="text-center"><i class="bi bi-check-circle-fill text-success"></i></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>4. Maximum grade</td>
+                                            <td class="text-center"><i class="bi bi-check-circle-fill text-success"></i></td>
+                                            <td>Grade points
+                                                <a href="https://docs.moodle.org/en/Grade_points" target="_blank"><i class="bi bi-box-arrow-up-right"></i></a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>5. Grade to pass</td>
+                                            <td class="text-center"><i class="bi bi-check-circle-fill text-success"></i></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>6. Hidden</td>
+                                            <td class="text-center"><i class="bi-x-circle-fill text-danger"></i></td>
+                                            <td>How can I hide grades?
+                                                <a href="https://docs.moodle.org/en/Grades_FAQ#How_can_I_hide_entered_grades_until_a_specified_date?" target="_blank"><i class="bi bi-box-arrow-up-right"></i></a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>7. Locked</td>
+                                            <td class="text-center"><i class="bi-x-circle-fill text-danger"></i></td>
+                                            <td>
+                                                How can I lock grades?
+                                                <a href="https://docs.moodle.org/en/Grade_locking" target="_blank"><i class="bi bi-box-arrow-up-right"></i></a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>8. Scale</td>
+                                            <td class="text-center"><i class="bi-x-circle-fill text-danger"></i></td>
+                                            <td>Scales <a href="https://docs.moodle.org/en/Scales" target="_blank"><i class="bi bi-box-arrow-up-right"></i></a></td>
+                                        </tr>
+                                        <tr>
+                                            <td>9. Last modified</td>
+                                            <td class="text-center"><i class="bi-x-circle-fill text-danger"></i></td>
+                                            <td class="text-center"><i class="bi bi-eye-slash-fill text-warning"></i></td>
+                                            <td>Not available on the front end</td>
+                                        </tr>
                                     </tbody>
                                 </table>
+                                <div class="modal fade" id="grade1Modal" tabindex="-1" role="dialog" aria-labelledby="grade1ModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog modal-dialog-centered" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title" id="grade1ModalLabel">Gradebook settings (Point) UI</h5>
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                            <div class="modal-body text-center">
+                                                <img src="gi_edit_point.png" alt="Gradebook settings (Point) UI" class="img-fluid" style="max-width:100%;height:auto;">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal fade" id="grade2Modal" tabindex="-1" role="dialog" aria-labelledby="grade2ModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog modal-dialog-centered" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title" id="grade2ModalLabel">Gradebook settings (Scale) UI</h5>
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                            <div class="modal-body text-center">
+                                                <img src="gi_edit_scale.png" alt="Gradebook settings (Scale) UI" class="img-fluid" style="max-width:100%;height:auto;">
+                                             </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal fade" id="grade3Modal" tabindex="-1" role="dialog" aria-labelledby="grade3ModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog modal-dialog-centered" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title" id="grade3ModalLabel">Activity settings - Grade (Point) UI</h5>
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                            <div class="modal-body text-center">
+                                                <img src="gi_cm_grade_point.png" alt="Activity settings - Grade (Point) UI" class="img-fluid" style="max-width:100%;height:auto;">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal fade" id="grade4Modal" tabindex="-1" role="dialog" aria-labelledby="grade4ModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog modal-dialog-centered" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title" id="grade4ModalLabel">Activity settings - Grade (Scale) UI</h5>
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                            <div class="modal-body text-center">
+                                                <img src="gi_cm_grade_scale.png" alt="Activity settings - Grade (Scale) UI" class="img-fluid" style="max-width:100%;height:auto;">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
