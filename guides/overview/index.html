@@ -386,7 +386,7 @@
                             </button>
                         </h2>
                     </div>
-                    <div id="collapseQuiz" class="collapse" aria-labelledby="headingQuiz" data-parent="#overviewAccordion">
+                    <div id="collapseQuiz" class="collapse show" aria-labelledby="headingQuiz" data-parent="#overviewAccordion">
                         <div class="card-body">
                             <div class="table-responsive">
                                 <h1>Coming soon...</h1>
@@ -400,9 +400,429 @@
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <!-- Add quiz settings rows here -->
+                                        <tr>
+                                            <td>1. Name</td>
+                                            <td class="text-center"><i class="bi bi-check-circle-fill text-success"></i></td>
+                                            <td class="text-center" style="vertical-align: middle;">
+                                                <button type="button" class="btn btn-info mb-3" data-toggle="modal" data-target="#quizgeneralModal">
+                                                    General
+                                                </button>
+                                            </td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>2. Open the quiz</td>
+                                            <td class="text-center"><i class="bi bi-check-circle-fill text-success"></i></td>
+                                            <td rowspan="5" class="text-center" style="vertical-align: middle;">
+                                                <button type="button" class="btn btn-info mb-3" data-toggle="modal" data-target="#quiztimingModal">
+                                                    Timing
+                                                </button>
+                                            </td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>3. Close the quiz</td>
+                                            <td class="text-center"><i class="bi bi-check-circle-fill text-success"></i></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>4. Time limit</td>
+                                            <td class="text-center"><i class="bi bi-check-circle-fill text-success"></i></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>5. When time expires</td>
+                                            <td class="text-center"><i class="bi bi-check-circle-fill text-success"></i></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>6. Submission grace period</td>
+                                            <td class="text-center"><i class="bi bi-check-circle-fill text-success"></i></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>7. Attempts allowed</td>
+                                            <td class="text-center"><i class="bi bi-check-circle-fill text-success"></i></td>
+                                            <td rowspan="4" class="text-center" style="vertical-align: middle;">
+                                                <button type="button" class="btn btn-info mb-3" data-toggle="modal" data-target="#quizgradelayoutModal">
+                                                    Grade & Layout
+                                                </button>
+                                            </td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>8. Grading method</td>
+                                            <td class="text-center"><i class="bi bi-check-circle-fill text-success"></i></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>9. New page</td>
+                                            <td class="text-center"><i class="bi bi-check-circle-fill text-success"></i></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>10. Navigation method</td>
+                                            <td class="text-center"><i class="bi bi-check-circle-fill text-success"></i></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>11. Shuffle within questions</td>
+                                            <td class="text-center"><i class="bi bi-check-circle-fill text-success"></i></td>
+                                            <td rowspan="4" class="text-center" style="vertical-align: middle;">
+                                                <button type="button" class="btn btn-info mb-3" data-toggle="modal" data-target="#quizqbehavourModal">
+                                                    Question behaviour
+                                                </button>
+                                            </td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>12. How questions behave</td>
+                                            <td class="text-center"><i class="bi bi-check-circle-fill text-success"></i></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>13. Allow redo within an attempt</td>
+                                            <td class="text-center"><i class="bi bi-check-circle-fill text-success"></i></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>14. Each attempt builds on the last</td>
+                                            <td class="text-center"><i class="bi bi-check-circle-fill text-success"></i></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>15. Review attempt</td>
+                                            <td></td>
+                                            <td rowspan="8" class="text-center" style="vertical-align: middle;">
+                                                <button type="button" class="btn btn-info mb-3" data-toggle="modal" data-target="#quizreviewModal">
+                                                    Review options
+                                                </button>
+                                            </td>
+                                            <td rowspan="8" style="vertical-align: middle;">
+                                                <i class="bi bi-patch-exclamation-fill text-success"></i> A semicolon separated list of the four possible stages where the corresponding information can be seen. For example:
+                                                <br>
+                                                <div class="alert alert-warning" role="alert">
+                                                    <code>During the attempt; Immediately after the attempt; Later, while the quiz is still open; After the quiz is closed</code>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>16. Whether correct</td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>17. Maximum marks</td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>18. Marks</td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>19. Specific feedback</td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>20. General feedback</td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>21. Right answer</td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>22. Overall feedback</td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>23. Show the user's picture</td>
+                                            <td class="text-center"><i class="bi bi-check-circle-fill text-success"></i></td>
+                                            <td rowspan="3" class="text-center" style="vertical-align: middle;">
+                                                <button type="button" class="btn btn-info mb-3" data-toggle="modal" data-target="#quizappearanceModal">
+                                                    Appearance
+                                                </button>
+                                            </td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>24. Decimal places in grades</td>
+                                            <td class="text-center"><i class="bi bi-check-circle-fill text-success"></i></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>25. Decimal places in marks for questions</td>
+                                            <td class="text-center"><i class="bi bi-check-circle-fill text-success"></i></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>26. Require the use of Safe Exam Browser</td>
+                                            <td class="text-center"><i class="bi bi-check-circle-fill text-success"></i></td>
+                                            <td rowspan="9" class="text-center" style="vertical-align: middle;">
+                                                <button type="button" class="btn btn-info mb-3" data-toggle="modal" data-target="#quizseb1Modal">
+                                                    Safe Exam Browser - part 1
+                                                </button>
+                                                <button type="button" class="btn btn-info mb-3" data-toggle="modal" data-target="#quizseb2Modal">
+                                                    Safe Exam Browser - part 2
+                                                </button>
+                                                <button type="button" class="btn btn-info mb-3" data-toggle="modal" data-target="#quizseb3Modal">
+                                                    Safe Exam Browser - part 3
+                                                </button>
+                                            </td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>27. Safe Exam Browser Config Yes/No fields</td>
+                                            <td></td>
+                                            <td>
+                                                <i class="bi bi-patch-exclamation-fill text-success"></i> A list of enabled (yes) fields separated by semicolons. For example:
+                                                <br>
+                                                <div class="alert alert-warning" role="alert">
+                                                    <code>Show Safe Exam Browser download button; Ask user to confirm quitting; Enable quitting of SEB; Enable reload in exam; Show SEB task bar; Show reload button; Show time; Show keyboard layout</code>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>28. Quit password</td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>29. Exit Safe Exam Browser</td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>30. Expressions allowed</td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>31. Regex allowed</td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>32. Expressions blocked</td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>33. Regex blocked</td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>34. Allowed browser exam keys</td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>35. Require password</td>
+                                            <td class="text-center"><i class="bi bi-check-circle-fill text-success"></i></td>
+                                            <td rowspan="5" class="text-center" style="vertical-align: middle;">
+                                                <button type="button" class="btn btn-info mb-3" data-toggle="modal" data-target="#quizextraModal">
+                                                    Extra restrictions on attempts
+                                                </button>
+                                            </td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>36. Require network address</td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>37. Enforced delay between 1st and 2nd attempts</td>
+                                            <td class="text-center"><i class="bi bi-check-circle-fill text-success"></i></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>38. Enforced delay between later attempts</td>
+                                            <td class="text-center"><i class="bi bi-check-circle-fill text-success"></i></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>39. Browser security</td>
+                                            <td class="text-center"><i class="bi bi-check-circle-fill text-success"></i></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>40. Minimum attempts</td>
+                                            <td class="text-center"><i class="bi bi-check-circle-fill text-success"></i></td>
+                                            <td class="text-center" style="vertical-align: middle;">
+                                                <button type="button" class="btn btn-info mb-3" data-toggle="modal" data-target="#quizcompletionModal">
+                                                    Completion conditions
+                                                </button>
+                                            </td>
+                                            <td></td>
+                                        </tr>
                                     </tbody>
                                 </table>
+                                <div class="modal fade" id="quizgeneralModal" tabindex="-1" role="dialog" aria-labelledby="quizgeneralModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog modal-dialog-centered" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title" id="quizgeneralModalLabel">General UI</h5>
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                            <div class="modal-body text-center">
+                                                <img src="quiz_general.png" alt="General UI" class="img-fluid" style="max-width:100%;height:auto;">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal fade" id="quiztimingModal" tabindex="-1" role="dialog" aria-labelledby="quiztimingModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog modal-dialog-centered" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title" id="quiztimingModalLabel">Timing UI</h5>
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                            <div class="modal-body text-center">
+                                                <img src="quiz_timing.png" alt="Timing UI" class="img-fluid" style="max-width:100%;height:auto;">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal fade" id="quizgradelayoutModal" tabindex="-1" role="dialog" aria-labelledby="quizgradelayoutModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog modal-dialog-centered" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title" id="quizgradelayoutModalLabel">Grade & Layout UI</h5>
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                            <div class="modal-body text-center">
+                                                <img src="quiz_grade_layout.png" alt="Grade & Layout UI" class="img-fluid" style="max-width:100%;height:auto;">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal fade" id="quizqbehavourModal" tabindex="-1" role="dialog" aria-labelledby="quizqbehavourModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog modal-dialog-centered" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title" id="quizqbehavourModalLabel">Question behaviour UI</h5>
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                            <div class="modal-body text-center">
+                                                <img src="quiz_qbehaviour.png" alt="Question behaviour UI" class="img-fluid" style="max-width:100%;height:auto;">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal fade" id="quizreviewModal" tabindex="-1" role="dialog" aria-labelledby="quizreviewModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog modal-dialog-centered" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title" id="quizreviewModalLabel">Review options UI</h5>
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                            <div class="modal-body text-center">
+                                                <img src="quiz_review.png" alt="Review options UI" class="img-fluid" style="max-width:100%;height:auto;">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal fade" id="quizappearanceModal" tabindex="-1" role="dialog" aria-labelledby="quizappearanceModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog modal-dialog-centered" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title" id="quizappearanceModalLabel">Appearance UI</h5>
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                            <div class="modal-body text-center">
+                                                <img src="quiz_appearance.png" alt="Appearance UI" class="img-fluid" style="max-width:100%;height:auto;">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal fade" id="quizseb1Modal" tabindex="-1" role="dialog" aria-labelledby="quizseb1ModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog modal-dialog-centered" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title" id="quizseb1ModalLabel">Safe Exam Browser - part 1 UI</h5>
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                            <div class="modal-body text-center">
+                                                <img src="quiz_seb1.png" alt="Safe Exam Browser - part 1 UI" class="img-fluid" style="max-width:100%;height:auto;">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal fade" id="quizseb2Modal" tabindex="-1" role="dialog" aria-labelledby="quizseb2ModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog modal-dialog-centered" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title" id="quizseb2ModalLabel">Safe Exam Browser - part 2 UI</h5>
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                            <div class="modal-body text-center">
+                                                <img src="quiz_seb2.png" alt="Safe Exam Browser - part 2 UI" class="img-fluid" style="max-width:100%;height:auto;">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal fade" id="quizseb3Modal" tabindex="-1" role="dialog" aria-labelledby="quizseb3ModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog modal-dialog-centered" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title" id="quizseb3ModalLabel">Safe Exam Browser - part 3 UI</h5>
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                            <div class="modal-body text-center">
+                                                <img src="quiz_seb3.png" alt="Safe Exam Browser - part 3 UI" class="img-fluid" style="max-width:100%;height:auto;">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal fade" id="quizextraModal" tabindex="-1" role="dialog" aria-labelledby="quizextraModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog modal-dialog-centered" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title" id="quizextraModalLabel">Extra restrictions on attempts UI</h5>
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                            <div class="modal-body text-center">
+                                                <img src="quiz_extra.png" alt="Extra restrictions on attempts UI" class="img-fluid" style="max-width:100%;height:auto;">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal fade" id="quizcompletionModal" tabindex="-1" role="dialog" aria-labelledby="quizcompletionModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog modal-dialog-centered" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title" id="quizcompletionModalLabel">Completion conditions UI</h5>
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                            <div class="modal-body text-center">
+                                                <img src="quiz_completion.png" alt="Completion conditions UI" class="img-fluid" style="max-width:100%;height:auto;">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
