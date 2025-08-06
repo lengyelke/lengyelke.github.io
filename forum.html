@@ -45,16 +45,211 @@
                         </svg></a></p>
             </div>
         </div>
-        <section class="py-4 py-xl-5">
-            <div class="container">
-                <div class="text-white bg-primary border rounded border-0 border-primary d-flex flex-column justify-content-between flex-lg-row p-4 p-md-5">
-                    <div class="pb-2 pb-lg-1">
-                        <h2 class="fw-bold mb-2">Coming soon ...</h2>
-                    </div>
-                    <div class="my-2"><a class="btn btn-light fs-5 px-4 py-2" role="button" href="index.html">Home</a></div>
+        <div class="row">
+            <div class="col">
+                <div class="table-responsive" style="border-style: solid;border-color: var(--bs-secondary);">
+                    <table class="table table-striped-columns table-hover table-bordered">
+                        <thead>
+                            <tr>
+                                <th>Name of the column</th>
+                                <th>Can be filtered?</th>
+                                <th>Where can I see it on the UI?</th>
+                                <th class="w-50">Comment</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1. Forum name</td>
+                                <td class="text-center align-content-center" style="text-align: center;"><i class="fas fa-check-circle" style="color: var(--bs-success);"></i></td>
+                                <td class="text-center align-content-center" style="text-align: center;" rowspan="2"><button class="btn btn-primary" type="button" data-bs-target="#modal-1" data-bs-toggle="modal">General</button></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>2. Forum type</td>
+                                <td class="text-center align-content-center"><i class="fas fa-check-circle" style="color: var(--bs-success);"></i></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>3. Due date</td>
+                                <td class="text-center align-content-center"><i class="fas fa-check-circle" style="color: var(--bs-success);"></i></td>
+                                <td class="text-center align-content-center" rowspan="5"><button class="btn btn-primary" type="button" data-bs-target="#modal-6" data-bs-toggle="modal">Availability &amp; Attachments</button></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>4. Cut-off date</td>
+                                <td class="text-center align-content-center"><i class="fas fa-check-circle" style="color: var(--bs-success);"></i></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>5. Maximum number of attachments</td>
+                                <td class="text-center align-content-center"><i class="fas fa-check-circle" style="color: var(--bs-success);"></i></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>6. Maximum attachment size</td>
+                                <td class="text-center align-content-center"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-x-circle-fill" style="color: var(--bs-danger);">
+                                        <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M5.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293z"></path>
+                                    </svg></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>7. Display word count</td>
+                                <td class="text-center align-content-center"><i class="fas fa-check-circle" style="color: var(--bs-success);"></i></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>8. Subscription mode</td>
+                                <td class="text-center align-content-center"><i class="fas fa-check-circle" style="color: var(--bs-success);"></i></td>
+                                <td class="text-center align-content-center" rowspan="8"><button class="btn btn-primary" type="button" data-bs-target="#modal-5" data-bs-toggle="modal">Subscription</button></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>9. Read tracking</td>
+                                <td class="text-center align-content-center"><i class="fas fa-check-circle" style="color: var(--bs-success);"></i></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>10. RSS feed for this activity</td>
+                                <td class="text-center align-content-center"><i class="fas fa-check-circle" style="color: var(--bs-success);"></i></td>
+                                <td rowspan="2">If&nbsp;<a href="https://docs.moodle.org/en/RSS_feeds_settings" target="_blank">RSS feeds</a>&nbsp;are enabled for the site and for forums, then an expandable section for RSS settings will appear.&nbsp;
+                                    <hr>Site administration &gt; General &gt; Advanced features &gt; Enable RSS feeds<br>Site administration &gt; Plugins &gt; Activity modules &gt; Forum &gt;&nbsp;Enable RSS feeds
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>11. Number of RSS recent articles</td>
+                                <td class="text-center align-content-center"><i class="fas fa-check-circle" style="color: var(--bs-success);"></i></td>
+                            </tr>
+                            <tr>
+                                <td>12. Lock discussions after period of inactivity</td>
+                                <td class="text-center align-content-center"><i class="fas fa-check-circle" style="color: var(--bs-success);"></i></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>13. Time period for blocking</td>
+                                <td class="text-center align-content-center"><i class="fas fa-check-circle" style="color: var(--bs-success);"></i></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>14. Post threshold for blocking</td>
+                                <td class="text-center align-content-center"><i class="fas fa-check-circle" style="color: var(--bs-success);"></i></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>15. Post threshold for warning</td>
+                                <td class="text-center align-content-center"><i class="fas fa-check-circle" style="color: var(--bs-success);"></i></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>16. Default setting for "Notify students"</td>
+                                <td class="text-center align-content-center"><i class="fas fa-check-circle" style="color: var(--bs-success);"></i></td>
+                                <td class="text-center align-content-center"><button class="btn btn-primary" type="button" data-bs-target="#modal-4" data-bs-toggle="modal">Grading</button></td>
+                                <td class="align-content-center" rowspan="4"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" class="bi bi-patch-exclamation-fll" style="color: var(--bs-success);">
+                                        <path fill-rule="evenodd" d="M10.067.87a2.89 2.89 0 0 0-4.134 0l-.622.638-.89-.011a2.89 2.89 0 0 0-2.924 2.924l.01.89-.636.622a2.89 2.89 0 0 0 0 4.134l.637.622-.011.89a2.89 2.89 0 0 0 2.924 2.924l.89-.01.622.636a2.89 2.89 0 0 0 4.134 0l.622-.637.89.011a2.89 2.89 0 0 0 2.924-2.924l-.01-.89.636-.622a2.89 2.89 0 0 0 0-4.134l-.637-.622.011-.89a2.89 2.89 0 0 0-2.924-2.924l-.89.01-.622-.636zM8 4a.905.905 0 0 0-.9.995l.35 3.507a.553.553 0 0 0 1.1 0l.35-3.507A.905.905 0 0 0 8 4zm.002 6a1 1 0 1 0 0 2 1 1 0 0 0 0-2z"></path>
+                                    </svg>&nbsp;'Whole forum grading' and 'Ratings' produce two separate grade items in the grade book. You can see their settings under the Grade Item Settings entity.</td>
+                            </tr>
+                            <tr>
+                                <td>17. Aggregate type</td>
+                                <td class="text-center align-content-center"><i class="fas fa-check-circle" style="color: var(--bs-success);"></i></td>
+                                <td class="text-center align-content-center" rowspan="3"><button class="btn btn-primary" type="button" data-bs-target="#modal-3" data-bs-toggle="modal">Ratings</button></td>
+                            </tr>
+                            <tr>
+                                <td>18. Rating from</td>
+                                <td class="text-center align-content-center"><i class="fas fa-check-circle" style="color: var(--bs-success);"></i></td>
+                            </tr>
+                            <tr>
+                                <td>19. Rating until</td>
+                                <td class="text-center align-content-center"><i class="fas fa-check-circle" style="color: var(--bs-success);"></i></td>
+                            </tr>
+                            <tr>
+                                <td>20. Start discussions or post replies</td>
+                                <td class="text-center align-content-center"><i class="fas fa-check-circle" style="color: var(--bs-success);"></i></td>
+                                <td class="text-center align-content-center" rowspan="3"><button class="btn btn-primary" type="button" data-bs-target="#modal-2" data-bs-toggle="modal">Completion conditions</button></td>
+                                <td class="align-content-center" rowspan="3"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" class="bi bi-patch-exclamation-fll" style="color: var(--bs-success);">
+                                        <path fill-rule="evenodd" d="M10.067.87a2.89 2.89 0 0 0-4.134 0l-.622.638-.89-.011a2.89 2.89 0 0 0-2.924 2.924l.01.89-.636.622a2.89 2.89 0 0 0 0 4.134l.637.622-.011.89a2.89 2.89 0 0 0 2.924 2.924l.89-.01.622.636a2.89 2.89 0 0 0 4.134 0l.622-.637.89.011a2.89 2.89 0 0 0 2.924-2.924l-.01-.89.636-.622a2.89 2.89 0 0 0 0-4.134l-.637-.622.011-.89a2.89 2.89 0 0 0-2.924-2.924l-.89.01-.622-.636zM8 4a.905.905 0 0 0-.9.995l.35 3.507a.553.553 0 0 0 1.1 0l.35-3.507A.905.905 0 0 0 8 4zm.002 6a1 1 0 1 0 0 2 1 1 0 0 0 0-2z"></path>
+                                    </svg>&nbsp;Activity specific completion conditions are always within the activity entity. Common conditions (i.e. 'Students must manually mark the activity as done' or 'View the activity') are under the Course Module Settings.</td>
+                            </tr>
+                            <tr>
+                                <td>21. Start discussions</td>
+                                <td class="text-center align-content-center"><i class="fas fa-check-circle" style="color: var(--bs-success);"></i></td>
+                            </tr>
+                            <tr>
+                                <td>22. Post replies</td>
+                                <td class="text-center align-content-center"><i class="fas fa-check-circle" style="color: var(--bs-success);"></i></td>
+                            </tr>
+                            <tr>
+                                <td>23. Time modified</td>
+                                <td class="text-center align-content-center"><i class="fas fa-check-circle" style="color: var(--bs-success);"></i></td>
+                                <td class="text-center align-content-center"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-eye-slash-fill" style="color: var(--bs-warning);">
+                                        <path d="m10.79 12.912-1.614-1.615a3.5 3.5 0 0 1-4.474-4.474l-2.06-2.06C.938 6.278 0 8 0 8s3 5.5 8 5.5a7.029 7.029 0 0 0 2.79-.588M5.21 3.088A7.028 7.028 0 0 1 8 2.5c5 0 8 5.5 8 5.5s-.939 1.721-2.641 3.238l-2.062-2.062a3.5 3.5 0 0 0-4.474-4.474L5.21 3.089z"></path>
+                                        <path d="M5.525 7.646a2.5 2.5 0 0 0 2.829 2.829l-2.83-2.829zm4.95.708-2.829-2.83a2.5 2.5 0 0 1 2.829 2.829zm3.171 6-12-12 .708-.708 12 12z"></path>
+                                    </svg></td>
+                                <td>Not available on the front end</td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
             </div>
-        </section>
+        </div>
+        <div class="modal fade" role="dialog" tabindex="-1" id="modal-1">
+            <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title">General UI</h4><button class="btn-close" type="button" aria-label="Close" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body"><img class="img-fluid" width="865" height="551" src="assets/img/reference/forum/forum_general.png"></div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" role="dialog" tabindex="-1" id="modal-6">
+            <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title">Availability &amp; Attachments UI</h4><button class="btn-close" type="button" aria-label="Close" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body"><img class="img-fluid" width="839" height="428" src="assets/img/reference/forum/forum_availability.png"></div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" role="dialog" tabindex="-1" id="modal-5">
+            <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title">Subscription &amp; RSS &amp; Locking UI</h4><button class="btn-close" type="button" aria-label="Close" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body"><img class="img-fluid" width="534" height="848" src="assets/img/reference/forum/forum_sub_rss_lock.png"></div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" role="dialog" tabindex="-1" id="modal-4">
+            <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title">Grading UI</h4><button class="btn-close" type="button" aria-label="Close" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body"><img class="img-fluid" width="783" height="553" src="assets/img/reference/forum/forum_grading.png"></div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" role="dialog" tabindex="-1" id="modal-3">
+            <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title">Ratings UI</h4><button class="btn-close" type="button" aria-label="Close" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body"><img class="img-fluid" width="783" height="705" src="assets/img/reference/forum/forum_rating.png"></div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" role="dialog" tabindex="-1" id="modal-2">
+            <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title">Completion conditions UI</h4><button class="btn-close" type="button" aria-label="Close" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body"><img class="img-fluid" width="745" height="591" src="assets/img/reference/forum/forum_completion.png"></div>
+                </div>
+            </div>
+        </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/bs-init.js"></script>
