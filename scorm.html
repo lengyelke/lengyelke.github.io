@@ -45,16 +45,220 @@
                         </svg></a></p>
             </div>
         </div>
-        <section class="py-4 py-xl-5">
-            <div class="container">
-                <div class="text-white bg-primary border rounded border-0 border-primary d-flex flex-column justify-content-between flex-lg-row p-4 p-md-5">
-                    <div class="pb-2 pb-lg-1">
-                        <h2 class="fw-bold mb-2">Coming soon ...</h2>
+        <div class="table-responsive" style="border-style: solid;border-color: var(--bs-secondary);">
+            <table class="table table-striped-columns table-hover table-bordered">
+                <thead>
+                    <tr>
+                        <th>Name of the column</th>
+                        <th>Can be filtered?</th>
+                        <th>Where can I see it on the UI?</th>
+                        <th class="w-50">Comment</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1. Name</td>
+                        <td class="text-center align-content-center" style="text-align: center;"><i class="fas fa-check-circle" style="color: var(--bs-success);"></i></td>
+                        <td class="text-center align-content-center" style="text-align: center;"><button class="btn btn-primary" type="button" data-bs-target="#modal-1" data-bs-toggle="modal">General</button></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>2. Type</td>
+                        <td class="text-center align-content-center"><i class="fas fa-check-circle" style="color: var(--bs-success);"></i></td>
+                        <td class="text-center align-content-center"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-eye-slash-fill" style="color: var(--bs-warning);">
+                                <path d="m10.79 12.912-1.614-1.615a3.5 3.5 0 0 1-4.474-4.474l-2.06-2.06C.938 6.278 0 8 0 8s3 5.5 8 5.5a7.029 7.029 0 0 0 2.79-.588M5.21 3.088A7.028 7.028 0 0 1 8 2.5c5 0 8 5.5 8 5.5s-.939 1.721-2.641 3.238l-2.062-2.062a3.5 3.5 0 0 0-4.474-4.474L5.21 3.089z"></path>
+                                <path d="M5.525 7.646a2.5 2.5 0 0 0 2.829 2.829l-2.83-2.829zm4.95.708-2.829-2.83a2.5 2.5 0 0 1 2.829 2.829zm3.171 6-12-12 .708-.708 12 12z"></path>
+                            </svg></td>
+                        <td><span style="color: rgb(51, 51, 51);">local, external or repository</span></td>
+                    </tr>
+                    <tr>
+                        <td>3. Package file</td>
+                        <td class="text-center align-content-center"><i class="fas fa-check-circle" style="color: var(--bs-success);"></i></td>
+                        <td class="text-center align-content-center"><button class="btn btn-primary" type="button" data-bs-target="#modal-1" data-bs-toggle="modal">Package</button></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>4. SCORM Version</td>
+                        <td class="text-center align-content-center"><i class="fas fa-check-circle" style="color: var(--bs-success);"></i></td>
+                        <td class="text-center align-content-center"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-eye-slash-fill" style="color: var(--bs-warning);">
+                                <path d="m10.79 12.912-1.614-1.615a3.5 3.5 0 0 1-4.474-4.474l-2.06-2.06C.938 6.278 0 8 0 8s3 5.5 8 5.5a7.029 7.029 0 0 0 2.79-.588M5.21 3.088A7.028 7.028 0 0 1 8 2.5c5 0 8 5.5 8 5.5s-.939 1.721-2.641 3.238l-2.062-2.062a3.5 3.5 0 0 0-4.474-4.474L5.21 3.089z"></path>
+                                <path d="M5.525 7.646a2.5 2.5 0 0 0 2.829 2.829l-2.83-2.829zm4.95.708-2.829-2.83a2.5 2.5 0 0 1 2.829 2.829zm3.171 6-12-12 .708-.708 12 12z"></path>
+                            </svg></td>
+                        <td>SCORM_1.2,&nbsp;AICC, Tin Can, ...&nbsp;<a href="https://docs.moodle.org/en/SCORM_FAQ#Supported_Versions" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-box-arrow-up-right" style="color: var(--bs-primary);">
+                                    <path fill-rule="evenodd" d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5"></path>
+                                    <path fill-rule="evenodd" d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0z"></path>
+                                </svg></a>&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td>5. Auto-update frequency</td>
+                        <td class="text-center align-content-center"><i class="fas fa-check-circle" style="color: var(--bs-success);"></i></td>
+                        <td class="text-center align-content-center"><button class="btn btn-primary" type="button" data-bs-target="#modal-1" data-bs-toggle="modal">Package</button></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>6. Display package</td>
+                        <td class="text-center align-content-center"><i class="fas fa-check-circle" style="color: var(--bs-success);"></i></td>
+                        <td class="text-center align-content-center" rowspan="7"><button class="btn btn-primary" type="button" data-bs-target="#modal-5" data-bs-toggle="modal">Appearance</button></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>7. Student skip content structure page</td>
+                        <td class="text-center align-content-center"><i class="fas fa-check-circle" style="color: var(--bs-success);"></i></td>
+                        <td class="text-center align-content-center"></td>
+                    </tr>
+                    <tr>
+                        <td>8. Disable preview mode</td>
+                        <td class="text-center align-content-center"><i class="fas fa-check-circle" style="color: var(--bs-success);"></i></td>
+                        <td class="text-center align-content-center"></td>
+                    </tr>
+                    <tr>
+                        <td>9. Display content structure in player</td>
+                        <td class="text-center align-content-center"><i class="fas fa-check-circle" style="color: var(--bs-success);"></i></td>
+                        <td class="text-center align-content-center"></td>
+                    </tr>
+                    <tr>
+                        <td>10. Show Navigation</td>
+                        <td class="text-center align-content-center"><i class="fas fa-check-circle" style="color: var(--bs-success);"></i></td>
+                        <td class="text-center align-content-center"></td>
+                    </tr>
+                    <tr>
+                        <td>11. Display content structure on entry page</td>
+                        <td class="text-center align-content-center"><i class="fas fa-check-circle" style="color: var(--bs-success);"></i></td>
+                        <td class="text-center align-content-center"></td>
+                    </tr>
+                    <tr>
+                        <td>12. Display attempt status</td>
+                        <td class="text-center align-content-center"><i class="fas fa-check-circle" style="color: var(--bs-success);"></i></td>
+                        <td class="text-center align-content-center"></td>
+                    </tr>
+                    <tr>
+                        <td>13. Available from</td>
+                        <td class="text-center align-content-center"><i class="fas fa-check-circle" style="color: var(--bs-success);"></i></td>
+                        <td class="text-center align-content-center" rowspan="2"><button class="btn btn-primary" type="button" data-bs-target="#modal-4" data-bs-toggle="modal">Availability</button></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>14. Available to</td>
+                        <td class="text-center align-content-center"><i class="fas fa-check-circle" style="color: var(--bs-success);"></i></td>
+                        <td class="text-center align-content-center"></td>
+                    </tr>
+                    <tr>
+                        <td>15. Attempts</td>
+                        <td class="text-center align-content-center"><i class="fas fa-check-circle" style="color: var(--bs-success);"></i></td>
+                        <td class="text-center align-content-center" rowspan="4"><button class="btn btn-primary" type="button" data-bs-target="#modal-3" data-bs-toggle="modal">Attempts management</button></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>16. Attempts grading</td>
+                        <td class="text-center align-content-center"><i class="fas fa-check-circle" style="color: var(--bs-success);"></i></td>
+                        <td class="text-center align-content-center"></td>
+                    </tr>
+                    <tr>
+                        <td>17. Force new attempt</td>
+                        <td class="text-center align-content-center"><i class="fas fa-check-circle" style="color: var(--bs-success);"></i></td>
+                        <td class="text-center align-content-center"></td>
+                    </tr>
+                    <tr>
+                        <td>18. Lock after final attempt</td>
+                        <td class="text-center align-content-center"><i class="fas fa-check-circle" style="color: var(--bs-success);"></i></td>
+                        <td class="text-center align-content-center"></td>
+                    </tr>
+                    <tr>
+                        <td>19. Force completed</td>
+                        <td class="text-center align-content-center"><i class="fas fa-check-circle" style="color: var(--bs-success);"></i></td>
+                        <td class="text-center align-content-center" rowspan="4"><button class="btn btn-primary" type="button" data-bs-target="#modal-3" data-bs-toggle="modal">Compatibility settings</button></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>20. Auto-continue</td>
+                        <td class="text-center align-content-center"><i class="fas fa-check-circle" style="color: var(--bs-success);"></i></td>
+                        <td class="text-center align-content-center"></td>
+                    </tr>
+                    <tr>
+                        <td>21. Auto-commit</td>
+                        <td class="text-center align-content-center"><i class="fas fa-check-circle" style="color: var(--bs-success);"></i></td>
+                        <td class="text-center align-content-center"></td>
+                    </tr>
+                    <tr>
+                        <td>22. Mastery score overrides status</td>
+                        <td class="text-center align-content-center"><i class="fas fa-check-circle" style="color: var(--bs-success);"></i></td>
+                        <td class="text-center align-content-center"></td>
+                    </tr>
+                    <tr>
+                        <td>23. Require minimum score</td>
+                        <td class="text-center align-content-center"><i class="fas fa-check-circle" style="color: var(--bs-success);"></i></td>
+                        <td class="text-center align-content-center" rowspan="3"><button class="btn btn-primary" type="button" data-bs-target="#modal-2" data-bs-toggle="modal">Completion conditions</button></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>24. Completed</td>
+                        <td class="text-center align-content-center"><i class="fas fa-check-circle" style="color: var(--bs-success);"></i></td>
+                        <td class="text-center align-content-center"></td>
+                    </tr>
+                    <tr>
+                        <td>25.&nbsp;All SCOs must return completion status</td>
+                        <td class="text-center align-content-center"><i class="fas fa-check-circle" style="color: var(--bs-success);"></i></td>
+                        <td class="text-center align-content-center"></td>
+                    </tr>
+                    <tr>
+                        <td>More columns are coming in next version</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="modal fade" role="dialog" tabindex="-1" id="modal-1">
+            <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title">General UI</h4><button class="btn-close" type="button" aria-label="Close" data-bs-dismiss="modal"></button>
                     </div>
-                    <div class="my-2"><a class="btn btn-light fs-5 px-4 py-2" role="button" href="index.html">Home</a></div>
+                    <div class="modal-body"><img class="img-fluid" width="872" height="887" src="assets/img/reference/scorm/scorm_1general.png"></div>
                 </div>
             </div>
-        </section>
+        </div>
+        <div class="modal fade" role="dialog" tabindex="-1" id="modal-5">
+            <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title">Appearance UI</h4><button class="btn-close" type="button" aria-label="Close" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body"><img class="img-fluid" width="511" height="664" src="assets/img/reference/scorm/scorm_2appearance.png"></div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" role="dialog" tabindex="-1" id="modal-4">
+            <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title">Availability UI</h4><button class="btn-close" type="button" aria-label="Close" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body"><img class="img-fluid" width="822" height="234" src="assets/img/reference/scorm/scorm_3availability.png"></div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" role="dialog" tabindex="-1" id="modal-3">
+            <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title">Attempts management &amp; Compatibility settings UI</h4><button class="btn-close" type="button" aria-label="Close" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body"><img class="img-fluid" width="671" height="627" src="assets/img/reference/scorm/scorm_4attempt_comp.png"></div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" role="dialog" tabindex="-1" id="modal-2">
+            <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title">Completion conditions UI</h4><button class="btn-close" type="button" aria-label="Close" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body"><img class="img-fluid" width="740" height="619" src="assets/img/reference/scorm/scorm_5completion.png"></div>
+                </div>
+            </div>
+        </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/bs-init.js"></script>
