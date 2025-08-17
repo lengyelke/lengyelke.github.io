@@ -45,16 +45,85 @@
                         </svg></a></p>
             </div>
         </div>
-        <section class="py-4 py-xl-5">
-            <div class="container">
-                <div class="text-white bg-primary border rounded border-0 border-primary d-flex flex-column justify-content-between flex-lg-row p-4 p-md-5">
-                    <div class="pb-2 pb-lg-1">
-                        <h2 class="fw-bold mb-2">Coming soon ...</h2>
+        <div class="table-responsive" style="border-style: solid;border-color: var(--bs-secondary);">
+            <table class="table table-striped-columns table-hover table-bordered">
+                <thead>
+                    <tr>
+                        <th>Name of the column</th>
+                        <th>Can be filtered?</th>
+                        <th>Where can I see it on the UI?</th>
+                        <th class="w-50">Comment</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1. Section Name</td>
+                        <td class="text-center align-content-center"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-x-circle-fill" style="color: var(--bs-danger);">
+                                <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M5.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293z"></path>
+                            </svg></td>
+                        <td class="text-center align-content-center"><button class="btn btn-primary" type="button" data-bs-target="#modal-1" data-bs-toggle="modal">Course main page</button></td>
+                        <td>Every course format has its own default names for sections. Usually section<sub>0</sub> has a different name.</td>
+                    </tr>
+                    <tr>
+                        <td>2. Section Number</td>
+                        <td class="text-center align-content-center"><i class="fas fa-check-circle" style="color: var(--bs-success);"></i></td>
+                        <td class="text-center align-content-center"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-eye-slash-fill" style="color: var(--bs-warning);">
+                                <path d="m10.79 12.912-1.614-1.615a3.5 3.5 0 0 1-4.474-4.474l-2.06-2.06C.938 6.278 0 8 0 8s3 5.5 8 5.5a7.029 7.029 0 0 0 2.79-.588M5.21 3.088A7.028 7.028 0 0 1 8 2.5c5 0 8 5.5 8 5.5s-.939 1.721-2.641 3.238l-2.062-2.062a3.5 3.5 0 0 0-4.474-4.474L5.21 3.089z"></path>
+                                <path d="M5.525 7.646a2.5 2.5 0 0 0 2.829 2.829l-2.83-2.829zm4.95.708-2.829-2.83a2.5 2.5 0 0 1 2.829 2.829zm3.171 6-12-12 .708-.708 12 12z"></path>
+                            </svg></td>
+                        <td>Cell 4</td>
+                    </tr>
+                    <tr>
+                        <td>3. Visible</td>
+                        <td class="text-center align-content-center"><i class="fas fa-check-circle" style="color: var(--bs-success);"></i></td>
+                        <td class="text-center align-content-center" rowspan="2"><button class="btn btn-primary" type="button" data-bs-target="#modal-1" data-bs-toggle="modal">Course main page</button></td>
+                        <td>Cell 4</td>
+                    </tr>
+                    <tr>
+                        <td>4. Access restrictions</td>
+                        <td class="text-center align-content-center"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-x-circle-fill" style="color: var(--bs-danger);">
+                                <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M5.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293z"></path>
+                            </svg></td>
+                        <td>Cell 4</td>
+                    </tr>
+                    <tr>
+                        <td>5. Component</td>
+                        <td class="text-center align-content-center"><i class="fas fa-check-circle" style="color: var(--bs-success);"></i></td>
+                        <td class="text-center align-content-center"><button class="btn btn-primary" type="button" data-bs-target="#modal-2" data-bs-toggle="modal">Course with subsection</button></td>
+                        <td>Cell 4</td>
+                    </tr>
+                    <tr>
+                        <td>6. Last modified</td>
+                        <td class="text-center align-content-center"><i class="fas fa-check-circle" style="color: var(--bs-success);"></i></td>
+                        <td class="text-center align-content-center"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-eye-slash-fill" style="color: var(--bs-warning);">
+                                <path d="m10.79 12.912-1.614-1.615a3.5 3.5 0 0 1-4.474-4.474l-2.06-2.06C.938 6.278 0 8 0 8s3 5.5 8 5.5a7.029 7.029 0 0 0 2.79-.588M5.21 3.088A7.028 7.028 0 0 1 8 2.5c5 0 8 5.5 8 5.5s-.939 1.721-2.641 3.238l-2.062-2.062a3.5 3.5 0 0 0-4.474-4.474L5.21 3.089z"></path>
+                                <path d="M5.525 7.646a2.5 2.5 0 0 0 2.829 2.829l-2.83-2.829zm4.95.708-2.829-2.83a2.5 2.5 0 0 1 2.829 2.829zm3.171 6-12-12 .708-.708 12 12z"></path>
+                            </svg></td>
+                        <td>Not available on the front end</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="modal fade" role="dialog" tabindex="-1" id="modal-1">
+            <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title">Course UI</h4><button class="btn-close" type="button" aria-label="Close" data-bs-dismiss="modal"></button>
                     </div>
-                    <div class="my-2"><a class="btn btn-light fs-5 px-4 py-2" role="button" href="index.html">Home</a></div>
+                    <div class="modal-body"><img class="img-fluid" width="854" height="697" src="assets/img/reference/coursesection/cs_name_visibility.png"></div>
                 </div>
             </div>
-        </section>
+        </div>
+        <div class="modal fade" role="dialog" tabindex="-1" id="modal-2">
+            <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title">Course UI</h4><button class="btn-close" type="button" aria-label="Close" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body"><img class="img-fluid" width="573" height="583" src="assets/img/reference/coursesection/cs_component.png"></div>
+                </div>
+            </div>
+        </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/bs-init.js"></script>
