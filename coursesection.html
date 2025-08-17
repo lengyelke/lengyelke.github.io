@@ -62,7 +62,7 @@
                                 <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M5.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293z"></path>
                             </svg></td>
                         <td class="text-center align-content-center"><button class="btn btn-primary" type="button" data-bs-target="#modal-1" data-bs-toggle="modal">Course main page</button></td>
-                        <td>Every course format has its own default names for sections. Usually section<sub>0</sub> has a different name.</td>
+                        <td>Every course format has its own default names for sections. Usually section<sub>0</sub> has a different name (General). The other sections might be 'Topic',&nbsp; 'Week' , 'New section' or 'Section' based on the course format. The default names are not stored in the database, that is why the filtering is not implemented.</td>
                     </tr>
                     <tr>
                         <td>2. Section Number</td>
@@ -71,26 +71,43 @@
                                 <path d="m10.79 12.912-1.614-1.615a3.5 3.5 0 0 1-4.474-4.474l-2.06-2.06C.938 6.278 0 8 0 8s3 5.5 8 5.5a7.029 7.029 0 0 0 2.79-.588M5.21 3.088A7.028 7.028 0 0 1 8 2.5c5 0 8 5.5 8 5.5s-.939 1.721-2.641 3.238l-2.062-2.062a3.5 3.5 0 0 0-4.474-4.474L5.21 3.089z"></path>
                                 <path d="M5.525 7.646a2.5 2.5 0 0 0 2.829 2.829l-2.83-2.829zm4.95.708-2.829-2.83a2.5 2.5 0 0 1 2.829 2.829zm3.171 6-12-12 .708-.708 12 12z"></path>
                             </svg></td>
-                        <td>Cell 4</td>
+                        <td>Not visible on the course page. The very first section is numbered 0 (zero). Subsections have their own number.</td>
                     </tr>
                     <tr>
                         <td>3. Visible</td>
                         <td class="text-center align-content-center"><i class="fas fa-check-circle" style="color: var(--bs-success);"></i></td>
                         <td class="text-center align-content-center" rowspan="2"><button class="btn btn-primary" type="button" data-bs-target="#modal-1" data-bs-toggle="modal">Course main page</button></td>
-                        <td>Cell 4</td>
+                        <td></td>
                     </tr>
                     <tr>
                         <td>4. Access restrictions</td>
                         <td class="text-center align-content-center"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-x-circle-fill" style="color: var(--bs-danger);">
                                 <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M5.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293z"></path>
                             </svg></td>
-                        <td>Cell 4</td>
+                        <td><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" class="bi bi-patch-exclamation-fll" style="color: var(--bs-success);">
+                                <path fill-rule="evenodd" d="M10.067.87a2.89 2.89 0 0 0-4.134 0l-.622.638-.89-.011a2.89 2.89 0 0 0-2.924 2.924l.01.89-.636.622a2.89 2.89 0 0 0 0 4.134l.637.622-.011.89a2.89 2.89 0 0 0 2.924 2.924l.89-.01.622.636a2.89 2.89 0 0 0 4.134 0l.622-.637.89.011a2.89 2.89 0 0 0 2.924-2.924l-.01-.89.636-.622a2.89 2.89 0 0 0 0-4.134l-.637-.622.011-.89a2.89 2.89 0 0 0-2.924-2.924l-.89.01-.622-.636zM8 4a.905.905 0 0 0-.9.995l.35 3.507a.553.553 0 0 0 1.1 0l.35-3.507A.905.905 0 0 0 8 4zm.002 6a1 1 0 1 0 0 2 1 1 0 0 0 0-2z"></path>
+                            </svg>&nbsp;In the database, this is JSON data including IDs and operators, which is not easy to read. It looks something like the following:<br>
+                            <div class="alert alert-warning" role="alert" style="color: var(--bs-warning);"><code>{"op":"&amp;", "c":[{"type":"date", "d":"&gt;=", "t":1751670000, "nodeUID":1751717275957}], "showc":[false]}</code></div>Using MySQL, it is almost impossible to decode or make it human readable; however, the Activity Setting Report will show the human-readable version of the restrictions.<br>
+                            <div class="alert alert-success" role="alert"><code>Available from <strong>5 July 2025</strong> (hidden otherwise)</code></div>
+                            <hr>
+                            <div class="alert alert-danger" role="alert"><span><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-radioactive fs-2">
+                                        <path d="M8 1a7 7 0 1 0 0 14A7 7 0 0 0 8 1M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8"></path>
+                                        <path d="M9.653 5.496A2.986 2.986 0 0 0 8 5c-.61 0-1.179.183-1.653.496L4.694 2.992A5.972 5.972 0 0 1 8 2c1.222 0 2.358.365 3.306.992zm1.342 2.324a2.986 2.986 0 0 1-.884 2.312 3.01 3.01 0 0 1-.769.552l1.342 2.683c.57-.286 1.09-.66 1.538-1.103a5.986 5.986 0 0 0 1.767-4.624l-2.994.18Zm-5.679 5.548 1.342-2.684A3 3 0 0 1 5.005 7.82l-2.994-.18a6 6 0 0 0 3.306 5.728ZM10 8a2 2 0 1 1-4 0 2 2 0 0 1 4 0"></path>
+                                    </svg>&nbsp;Generating human-readable availability information for many activities or modules may take extra time and can slow down your system, especially in big courses or large reports. Please be patient and consider filtering or paginating your results for best performance. You can also use the Scheduler and run the report at night time or when your site is not busy.&nbsp;<span style="color: var(--bs-warning);"> </span></span><a class="alert-link" href="https://docs.moodle.org/en/Custom_reports#Schedule_reports" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-box-arrow-up-right" style="color: var(--bs-primary);">
+                                        <path fill-rule="evenodd" d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5"></path>
+                                        <path fill-rule="evenodd" d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0z"></path>
+                                    </svg></a></div>
+                            <hr>How to set up restrict access?&nbsp;<a href="https://docs.moodle.org/en/Restrict_access_settings" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-box-arrow-up-right" style="color: var(--bs-primary);">
+                                    <path fill-rule="evenodd" d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5"></path>
+                                    <path fill-rule="evenodd" d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0z"></path>
+                                </svg></a><br><br>
+                        </td>
                     </tr>
                     <tr>
                         <td>5. Component</td>
                         <td class="text-center align-content-center"><i class="fas fa-check-circle" style="color: var(--bs-success);"></i></td>
                         <td class="text-center align-content-center"><button class="btn btn-primary" type="button" data-bs-target="#modal-2" data-bs-toggle="modal">Course with subsection</button></td>
-                        <td>Cell 4</td>
+                        <td>Right now it can only be 'Subsection', but later other components will be available.<br>See:&nbsp;delegated sections (sections controlled by a component). Not well documented yet.</td>
                     </tr>
                     <tr>
                         <td>6. Last modified</td>
